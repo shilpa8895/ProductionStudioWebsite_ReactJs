@@ -1,0 +1,67 @@
+/* Styles/ContactPage.css */
+
+body {
+  background-color: black; /* Set background color of the entire page to black */
+  color: white; /* Set text color to white */
+}
+
+.contactPage_container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.contactPage_submit_button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5bc0de; /* Set background color to light blue */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactPage_submit_button:hover {
+  background-color: #2e6e80; /* Darker shade of light blue on hover */
+}
+
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
