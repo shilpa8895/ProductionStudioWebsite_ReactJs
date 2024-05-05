@@ -15,9 +15,11 @@ NOTE - reference video - https://www.youtube.com/watch?v=iLrywUfs7yU
     
 # Setup the project structure in local
 Clone the  main branch - CODE - copy the https url
+
     git clone https://<Personal access token>@github.com/shilpa8895/CreativeProductionStudio.git
     
 Create your own branch now - using the following command - 
+
     git checkout -b <branch Name>
     
     git pull origin main
