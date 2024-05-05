@@ -4,36 +4,95 @@ import axios from 'axios';
 import Navbar from './Navbar';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from 'emailjs-com';
 
 
 function ContactPage() {
   const [showMessage, setShowMessage] = useState(false);
   const history = useNavigate();
+  
+
+  const sendEmailToRecipient = async (formData) => {
+    const sendEmailToRecipient_serviceID = 'service_zhfccof';
+    const sendEmailToRecipient_publicKey = 'K4kh-ImIP626M8Epy';
+    const sendEmailToRecipient_templateID = 'template_ak4ia0p';
+    try {
+      await emailjs.send(
+        sendEmailToRecipient_serviceID,
+        sendEmailToRecipient_templateID,
+        {
+          sender_emailAddress: 'shilpa.patel8895@gmail.com',
+          recipient_emailAddress: formData.emailAddress,
+          username: formData.fullName,
+        },
+        sendEmailToRecipient_publicKey
+      );
+      return true;
+    } catch (error) {
+      console.error('Error sending email to recipient:', error);
+      return false;
+    }
+  };
+
+  const sendEmailToSender = async (formData) => {
+    const sendEmailToSender_serviceID = 'service_epaobtg';
+    const sendEmailToSender_publicKey = 'K4kh-ImIP626M8Epy';
+    const sendEmailToSender_templateID = 'template_nwxgkvd';
+    try {
+      await emailjs.send(
+        sendEmailToSender_serviceID,
+        sendEmailToSender_templateID,
+        {
+          admin_emailAddress: "shilpa.patel8895@gmail.com",
+          user_emailAddress: formData.emailAddress,
+          username: formData.fullName,
+          phoneNumber: formData.phoneNumber,
+          cityState: formData.cityState,
+          emailAddress: formData.emailAddress,
+          description: formData.description,
+        },
+        sendEmailToSender_publicKey
+      );
+      return true;
+    } catch (error) {
+      console.error('Error sending email to sender:', error);
+      return false;
+    }
+  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const formData = {
-    //   fullName: e.target.fullName.value,
-    //   phoneNumber: e.target.phoneNumber.value,
-    //   cityState: e.target.cityState.value,
-    //   companyName: e.target.companyName.value,
-    //   emailAddress: e.target.emailAddress.value,
-    //   description: e.target.description.value,
-    // //   agree: e.target.agree.checked,
-    // };
+    const formData = {
+      fullName: e.target.fullName.value,
+      phoneNumber: e.target.phoneNumber.value,
+      cityState: e.target.cityState.value,
+      emailAddress: e.target.emailAddress.value,
+      description: e.target.description.value,
+    };
 
-    try {
       setShowMessage(true);
-      // Optionally reset the form fields after successful submission
-      e.target.reset();
-      setTimeout(() => {
-        history.push('/');
-      }, 3000);
-    } catch (error) {
-      console.error('Error submitting enquiry:', error);
-      alert('Failed to submit enquiry. Please try again later.');
-    }
+      const recipientEmailSent = await sendEmailToRecipient(formData);
+      if (recipientEmailSent) {
+        const senderEmailSent = await sendEmailToSender(formData);
+        if (senderEmailSent) {
+          setTimeout(() => {
+            setShowMessage(false);
+            history('/');
+          }, 3000);
+          e.target.reset();
+        } else {
+          console.error('Error sending email to sender');
+          setShowMessage(false);
+          alert('Failed to submit enquiry. Please try again later.');
+        }
+      } else {
+        console.error('Error sending email to recipient');
+        setShowMessage(false);
+        alert('Failed to submit enquiry. Please try again later.');
+      }
+     
   };
 
   return (
