@@ -29,7 +29,7 @@ Run the code
     
     npm start 
     
-NOTE - If any error comes for dependencies not found do npm install <Dependency name>
+NOTE - If any error comes for dependencies not found do npm install {Dependency name}
 
 
 
