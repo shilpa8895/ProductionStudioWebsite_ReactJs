@@ -19,7 +19,6 @@ function FaqController() {
         });
     };
 
-
     return (
         <div className="container">
             <Navbar />
@@ -29,7 +28,7 @@ function FaqController() {
             }}>
             </div>
 
-            <h5>Frequently Asked Questions</h5>
+            <h5>Frequently Asked Questions!</h5>
             {/*SEARCH BAR*/}
             <li className="search-bar">
                 <input type="text" placeholder="Search..." />
