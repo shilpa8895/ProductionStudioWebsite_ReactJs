@@ -14,7 +14,7 @@ function AboutUsController() {
         </div>
         <h5>About Us</h5>
         <p>
-          Welcome to Universal Entertainment, your premier destination for diverse and captivating media content in Australia.
+          Welcome to Entertainment, your premier destination for diverse and captivating media content in Australia.
           </p>
           <br />
           <p>
