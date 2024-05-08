@@ -1,0 +1,46 @@
+h5{
+    text-align: center;
+}
+
+/*SEARCHBAR*/ 
+/* .search-bar{
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5px 300px 0px 300px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 5px 30%; /* Adjust padding based on container width */
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    /* Apply different styles for screens smaller than 768px */
+    .search-bar {
+        padding: 5px 2%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Apply different styles for screens smaller than 576px */
+    .search-bar {
+        padding: 5px 1%;
+    }
+}
+    
+.search-bar input{
+    background: transparent;
+    margin-right: 10px;
+    color: white;
+}
+    
+.search-bar input::placeholder {
+    color: #b4b4b4;
+}    
+     
