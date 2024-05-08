@@ -44,6 +44,21 @@ h6 {
     color: #b4b4b4;
 }    
 
+a {
+    color: #ffb300; /* Default color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Hover styles */
+a:hover {
+    color: #FF5733; /* Change color on hover */
+}
+
+/* Active styles */
+a:active {
+    color: #FFC300; /* Change color when link is clicked */
+}
+
 /*FAQs*/
 .faq-container{
     max-width: 600px;

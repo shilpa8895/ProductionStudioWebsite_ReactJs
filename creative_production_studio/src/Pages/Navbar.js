@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Images/CreativeProductionStudio_Logo.jpg'; 
+import logo from '..//Users/../Images/CreativeProductionStudio_Logo.jpg'; 
 import '../Styles/Navbar.css'; 
 
 function Navbar() {

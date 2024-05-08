@@ -36,7 +36,7 @@ function FaqController() {
                 {/* You can add a button here for searching if needed */}
             </li>
 
-            <h6>Can't find an answer to your question? <br></br>Please email us
+            <h6>Can't find an answer to your question? <br></br>Please <a href="mailto:enquires@creativeproductionstudio.com" target="_blank">email us </a>
                 and we'll get back to you as soon as we can!
             </h6>
 
@@ -54,7 +54,7 @@ function FaqController() {
                 <div className="faq">
                     <h3 className="faq-title">Question 2?</h3>
                     {/* Render FAQ text conditionally based on showAnswers state */}
-                    {showAnswers[1] && <p className="faq-text">Question 2 answer</p>}
+                    {showAnswers[1] && <p className="faq-text">Question 3 answer</p>}
                     {/* Toggle button for FAQ item */}
                     <button className="faq-toggle" onClick={() => toggleAnswers(1)}>
                         {/* Render different icons based on showAnswers state */}
