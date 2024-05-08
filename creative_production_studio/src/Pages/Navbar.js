@@ -18,6 +18,11 @@ function Navbar() {
           <li><Link to="/news">News</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          {/*SEARCH BAR*/}
+         <li className="search-bar">
+           <input type="text" placeholder="Search..." />
+           {/* You can add a button here for searching if needed */}
+         </li>
         </ul>
       </nav>
   );
