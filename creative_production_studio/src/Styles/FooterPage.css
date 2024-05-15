@@ -1,0 +1,23 @@
+/* Styles/Footer.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; /* Background color for navbar */
+}
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+.navbar ul li {
+    margin-top: 25px;
+    padding: 0;
+  }
+  
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
