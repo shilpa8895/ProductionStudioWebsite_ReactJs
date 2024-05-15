@@ -1,23 +1,54 @@
 /* Styles/Footer.css */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black; /* Background color for navbar */
+/* 
+.container text-center{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
 }
-.navbar ul {
+.row {
     list-style-type: none;
     display: flex;
-    gap: 20px;
-  }
+    gap: 50px;
+}
   
-.navbar ul li {
-    margin-top: 25px;
-    padding: 0;
-  }
-  
-.navbar ul li a {
+.row ul li a {
     color: white;
+}
+
+div .col-a{
+    text-align: left;
     text-decoration: none;
+}
+
+div .col-a h6{
+    text-align: left;
+}
+ */
+
+/*  main > .container {
+    padding: 60px 15px 0;
+  } */
+
+
+
+  h6{
+    text-align: left !important;
+    font-weight: bold !important;
+  }
+
+  .footer ul{
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .footer a{
+    color: white;
+    font-size: 13px;
+  }
+
+  .footer a:hover{
+    color:aqua;
   }
