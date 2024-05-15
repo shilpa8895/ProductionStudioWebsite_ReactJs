@@ -23,10 +23,10 @@ function FaqController() {
         <div className="container">
             <Navbar />
 
-            <div className="hero-container" style={{
+{/*             <div className="hero-container" style={{
                 backgroundImage: `url(${heroimage})`
             }}>
-            </div>
+            </div> */}
 
             <h5>Frequently Asked Questions!</h5>
             {/*SEARCH BAR*/}
