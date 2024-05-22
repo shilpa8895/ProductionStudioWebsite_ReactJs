@@ -4,7 +4,6 @@ import HomePage from './Pages/HomePage';
 import ContactPage from './Pages/ContactPage'; // Assuming you have a ContactPage component
 import AboutUsPage from './Pages/AboutUsPage';
 import FaqPage from './Pages/FaqPage';
-import NewsPage from './Pages/NewsPage';
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/faq" element={<FaqPage />} />
-        <Route path="/news" element={<NewsPage />} />
       </Routes>
     </Router>
   );

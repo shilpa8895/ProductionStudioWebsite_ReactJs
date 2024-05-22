@@ -49,15 +49,15 @@ function ContactPage() {
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="fullName" placeholder='e.g John Doe'pattern='[a-zA-Z\s]*' required />
+            <input type="text" id="fullName" name="fullName" placeholder='e.g John Doe'pattern='[a-zA-Z\s]*' title="Full name can only include letters and dashes" required />
             <br />
 
             <label htmlFor="phoneNumber">Phone Number *</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder='e.g (04)12 345 678' size={10} maxLength={10}required />
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder='e.g (04)12 345 678' size={10} maxLength={10} pattern='[0-9]{10}' title="Please enter a 10 digit phone number" required />
             <br />
 
             <label htmlFor="cityState">City/State *</label>
-            <input type="text" id="cityState" name="cityState" placeholder='e.g Melbourne/Victoria' required />
+            <input type="text" id="cityState" name="cityState" placeholder='e.g Melbourne/Victoria' title="Please enter your city/state" required />
             <br />
 
             <label htmlFor="email">Email Address *</label>
@@ -67,7 +67,7 @@ function ContactPage() {
             <label htmlFor="description">Description *</label>
             <textarea id="description" name="description" placeholder='enter description' required></textarea>
             <br />
-
+            <br />
             <button type="submit" className="contactPage_submit_button">
               Submit
             </button>

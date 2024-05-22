@@ -15,7 +15,6 @@ function Navbar() {
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
           <li><Link to="/film">Film</Link></li>
-          <li><Link to="/news">News</Link></li>
           <li><Link to="/faq">FAQ</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           {/*SEARCH BAR*/}
