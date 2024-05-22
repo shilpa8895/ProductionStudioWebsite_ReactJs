@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import emailConfig from '../config/EmailConfig';
 
 
 function ContactPage() {
@@ -13,19 +14,17 @@ function ContactPage() {
   
 
   const sendEmailToRecipient = async (formData) => {
-    const sendEmailToRecipient_serviceID = 'service_zhfccof';
-    const sendEmailToRecipient_publicKey = 'K4kh-ImIP626M8Epy';
-    const sendEmailToRecipient_templateID = 'template_ak4ia0p';
+    
     try {
       await emailjs.send(
-        sendEmailToRecipient_serviceID,
-        sendEmailToRecipient_templateID,
+        emailConfig.sendEmailToRecipient.serviceID,
+        emailConfig.sendEmailToRecipient.templateID,
         {
-          sender_emailAddress: 'shilpa.patel8895@gmail.com',
+          sender_emailAddress: 'admin@gmail.com',  // <Add the admin emailaddress>
           recipient_emailAddress: formData.emailAddress,
           username: formData.fullName,
         },
-        sendEmailToRecipient_publicKey
+        emailConfig.sendEmailToRecipient.publicKey
       );
       return true;
     } catch (error) {
@@ -35,15 +34,13 @@ function ContactPage() {
   };
 
   const sendEmailToSender = async (formData) => {
-    const sendEmailToSender_serviceID = 'service_epaobtg';
-    const sendEmailToSender_publicKey = 'K4kh-ImIP626M8Epy';
-    const sendEmailToSender_templateID = 'template_nwxgkvd';
+    
     try {
       await emailjs.send(
-        sendEmailToSender_serviceID,
-        sendEmailToSender_templateID,
+        emailConfig.sendEmailToSender.serviceID,
+        emailConfig.sendEmailToSender.templateID,
         {
-          admin_emailAddress: "shilpa.patel8895@gmail.com",
+          admin_emailAddress: "admin@gmail.com", // <Add the admin emailaddress>
           user_emailAddress: formData.emailAddress,
           username: formData.fullName,
           phoneNumber: formData.phoneNumber,
@@ -51,7 +48,7 @@ function ContactPage() {
           emailAddress: formData.emailAddress,
           description: formData.description,
         },
-        sendEmailToSender_publicKey
+        emailConfig.sendEmailToSender.publicKey
       );
       return true;
     } catch (error) {
