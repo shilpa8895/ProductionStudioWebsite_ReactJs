@@ -1,6 +1,5 @@
 import React from 'react';
 import '../Styles/HomePage.css'; 
-
 import Navbar from './Navbar';
 import Footer from './Footer';
 import backgroundVideo from '../Videos/CreativeProductionStudio_HomePage.mp4';
