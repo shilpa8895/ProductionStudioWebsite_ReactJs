@@ -17,6 +17,8 @@ NOTE - reference video - https://www.youtube.com/watch?v=iLrywUfs7yU
 Clone the  main branch - CODE - copy the https url
 
     git clone https://<Personal access token>@github.com/shilpa8895/CreativeProductionStudio.git
+    OR
+    git clone <SSH URL>
     
 Create your own branch now - using the following command - 
 
