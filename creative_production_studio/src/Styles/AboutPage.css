@@ -1,0 +1,42 @@
+/* AboutPage.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #141414; /* Black background */
+  }
+  
+  .navbar, .footer {
+    flex-shrink: 0;
+  }
+  
+  .content-wrap {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .about-content h1, .about-content h2 {
+    color: #ffffff;
+  }
+  
+  .about-content p {
+    color: #dddddd;
+    line-height: 1.6;
+  }
+  

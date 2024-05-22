@@ -1,0 +1,83 @@
+/* Projects.css */
+
+.projects-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .projects-container {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #141414;
+    color: #ffffff;
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    background-color: #1e1e1e;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 600px;
+  }
+  
+  .project-image {
+    width: 200px;
+    height: auto;
+  }
+  
+  .project-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .project-details h2 {
+    margin: 0 0 10px;
+  }
+  
+  .project-details p {
+    margin: 0 0 20px;
+  }
+  
+  .project-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .project-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .project-cast h3 {
+    margin: 0 0 10px;
+  }
+  
+  .project-cast ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-cast li {
+    margin: 0 0 5px;
+  }
+  
+  .project-cast a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .project-cast a:hover {
+    text-decoration: underline;
+  }
+  
